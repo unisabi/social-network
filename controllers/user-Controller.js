@@ -23,7 +23,7 @@ const grade = async (studentId) =>
     },
   ]);
 
-module.exports = {
+const userController = {
   // Get all students
   getStudents(req, res) {
     Student.find()
@@ -122,3 +122,5 @@ module.exports = {
       .catch((err) => res.status(500).json(err));
   },
 };
+
+module.exports = userController;
